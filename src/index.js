@@ -1,5 +1,1 @@
-import Tabs from './components/Tabs';
-
-module.exports = {
-  Tabs
-};
+export { default as Tabs } from './components/Tabs';;
