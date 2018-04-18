@@ -1,22 +1,41 @@
 {
-  "name": "tabs-component",
-  "version": "1.0.0",
-  "description":
-    "This component use compound components concept to create a simple tabs component",
-  "keywords": [],
-  "main": "src/index.js",
+  "name": "@yazanaabed/react-tabs",
+  "version": "1.0.1",
+  "description": "This component use compound components concept to create a simple tabs component",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "dependencies": {
-    "glamor": "2.20.40",
-    "glamorous": "4.12.3",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
+    "babel-cli": "^6.26.0"
+  },
+  "devDependencies": {
+    "glamor": "2.20.40", 
+    "glamorous": "4.12.3", 
+    "react": "16.3.2", 
+    "react-dom": "16.3.2", 
     "react-scripts": "1.1.4"
   },
-  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YazanAabeed/react-tabs.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "tabs",
+    "react-tabs",
+    "state-management",
+    "components",
+    "glamorous"
+  ],
+  "author": "yazanaabed <yazanaabed2@gmail.com> (https://medium.com/@yazanaabed)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YazanAabeed/react-tabs/issues"
+  },
+  "homepage": "https://github.com/YazanAabeed/react-tabs#readme"
 }
