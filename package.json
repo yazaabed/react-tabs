@@ -1,6 +1,6 @@
 {
   "name": "@yazanaabed/react-tabs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This component use compound components concept to create a simple tabs component",
   "main": "lib/index.js",
   "directories": {
@@ -17,7 +17,11 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "compile": "NODE_ENV=production babel src --out-dir lib --copy-files"
   },
   "repository": {
     "type": "git",
