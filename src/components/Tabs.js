@@ -10,29 +10,10 @@ const ListTabs = glamorous.ul({
   margin: 0
 });
 
-const TabTitleItem = glamorous.li(
-  {
-    display: "inline-block",
-    paddingRight: 5,
-    paddingLeft: 5,
-    transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-    padding: "16px 30px",
-    cursor: "pointer",
-    opacity: "0.4",
-    ":hover": {
-      opacity: 1
-    }
-  },
-  props => {
-    return (
-      props.isActiveTab && {
-        transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
-        cursor: "default",
-        opacity: 1
-      }
-    );
-  }
-);
+const TabTitleItem = glamorous.li({
+  display: "inline-block",
+  transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms"
+});
 
 const ActiveTabBorder = glamorous.div(
   {
@@ -53,11 +34,30 @@ const ActiveTabBorder = glamorous.div(
   }
 );
 
-const TabAnchorItem = glamorous.a({
-  textTransform: "capitalize",
-  color: "#000000",
-  fontWeight: 600
-});
+const TabAnchorItem = glamorous.a(
+  {
+    textTransform: "capitalize",
+    color: "#000000",
+    fontWeight: 600,
+    padding: "16px 30px",
+    cursor: "pointer",
+    opacity: "0.4",
+    display: "block",
+    textDecoration: "none",
+    ":hover": {
+      opacity: 1
+    }
+  },
+  props => {
+    return (
+      props.isActiveTab && {
+        transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+        cursor: "default",
+        opacity: 1
+      }
+    );
+  }
+);
 
 const TabsContainer = glamorous.div({
   position: "relative",
@@ -86,7 +86,6 @@ class Tabs extends Component {
                   {value.context.tabs.map((tab, index) => (
                     <TabTitleItem
                       key={index}
-                      onClick={value.context.onClick(tab)}
                       id={tab.id}
                       innerRef={tabElement => {
                         if (!this.state.tabsElements[tab.id]) {
@@ -100,9 +99,21 @@ class Tabs extends Component {
                           });
                         }
                       }}
-                      isActiveTab={value.context.activeTab.id === tab.id}
                     >
-                      <TabAnchorItem>{tab.title}</TabAnchorItem>
+                      <TabAnchorItem
+                        isActiveTab={this.state.activeTab.id === tab.id}
+                        href="#"
+                        onClick={this.onClick(tab)}
+                        onKeyPress={event => {
+                          const code = event.keyCode || event.which;
+
+                          if (code === 13) {
+                            this.onClick(tab)(event);
+                          }
+                        }}
+                      >
+                        {tab.title}
+                      </TabAnchorItem>
                     </TabTitleItem>
                   ))}
                 </ListTabs>
