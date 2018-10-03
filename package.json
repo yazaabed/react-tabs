@@ -2,18 +2,19 @@
   "name": "@yazanaabed/react-tabs",
   "version": "1.2.0",
   "description": "This component use compound components concept to create a simple tabs component",
-  "main": "lib/index.js",
+  "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "src": "src"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "glamor": "2.20.40",
+    "glamorous": "4.13.1",
+    "react": "16.5.2"
   },
   "devDependencies": {
-    "glamor": "2.20.40", 
-    "glamorous": "4.12.3", 
-    "react": "16.3.2", 
-    "react-dom": "16.3.2", 
+    "react-dom": "16.3.2",
     "react-scripts": "1.1.4"
   },
   "scripts": {
