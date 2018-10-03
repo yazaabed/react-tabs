@@ -1,6 +1,6 @@
 {
   "name": "@yazanaabed/react-tabs",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "This component use compound components concept to create a simple tabs component",
   "main": "index.js",
   "directories": {
@@ -8,7 +8,9 @@
     "src": "src"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0",
+    "@babel/cli": "^7.1.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "glamor": "2.20.40",
     "glamorous": "4.13.1",
     "react": "16.5.2"
