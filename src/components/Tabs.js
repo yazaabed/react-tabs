@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import glamorous from "glamorous";
 
 import * as TabsContext from "./TabsContext";
-import Tab from "./Tab";
+import TabItem from "./Tab";
 
 const ListTabs = glamorous.ul({
   paddingLeft: 0,
@@ -69,7 +69,7 @@ const ReactTabs = glamorous.div({
 });
 
 class Tabs extends Component {
-  static Tab = Tab;
+  static Tab = TabItem;
 
   state = {
     tabsElements: []
