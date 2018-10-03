@@ -9,8 +9,7 @@
   },
   "dependencies": {
     "@babel/cli": "^7.1.2",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
+    "@babel/core": "^7.1.2",
     "glamor": "2.20.40",
     "glamorous": "4.13.1",
     "react": "16.5.2"
@@ -27,6 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
+    "compile": "npm run compile-dev && npm run compile-prod",
     "compile-dev": "NODE_ENV=development babel src --out-dir lib/dev --copy-files",
     "compile-prod": "NODE_ENV=production babel lib/dev --out-dir lib/prod --copy-files"
   },
