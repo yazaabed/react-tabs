@@ -101,9 +101,9 @@ class Tabs extends Component {
                       }}
                     >
                       <TabAnchorItem
-                        isActiveTab={this.state.activeTab.id === tab.id}
+                        isActiveTab={value.context.activeTab.id === tab.id}
                         href="#"
-                        onClick={this.onClick(tab)}
+                        onClick={value.context.onClick(tab)}
                         onKeyPress={event => {
                           const code = event.keyCode || event.which;
 
