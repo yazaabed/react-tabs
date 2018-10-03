@@ -5,7 +5,7 @@ module.exports = function (api) {
 
   if (nodeEnv === 'production') {
     return {
-      "presets": ["@babel/preset-react", "@babel/preset-env"],
+      "presets": ["@babel/preset-env"],
       "env": {
         "production": {
           "presets": ["minify"]
