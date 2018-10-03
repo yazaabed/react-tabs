@@ -1,6 +1,6 @@
 {
   "name": "@yazanaabed/react-tabs",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "This component use compound components concept to create a simple tabs component",
   "main": "index.js",
   "directories": {
