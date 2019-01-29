@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import glamorous from "glamorous";
 
-import * as TabsContext from "./TabsContext";
+import { TabProvider, TabConsumer } from "./TabsContext";
 import TabItem from "./Tab";
 
 const ListTabs = glamorous.ul({
@@ -77,8 +77,8 @@ class Tabs extends Component {
 
   render() {
     return (
-      <TabsContext.TabProvider activeTab={this.props.activeTab}>
-        <TabsContext.TabConsumer>
+      <TabProvider activeTab={this.props.activeTab}>
+        <TabConsumer>
           {value => (
             <ReactTabs>
               <TabsContainer>
@@ -102,7 +102,7 @@ class Tabs extends Component {
                     >
                       <TabAnchorItem
                         isActiveTab={value.context.activeTab.id === tab.id}
-                        href="#"
+                        href="javascript:void(0)"
                         onClick={value.context.onClick(tab)}
                         onKeyPress={event => {
                           const code = event.keyCode || event.which;
@@ -128,8 +128,8 @@ class Tabs extends Component {
               {this.props.children}
             </ReactTabs>
           )}
-        </TabsContext.TabConsumer>
-      </TabsContext.TabProvider>
+        </TabConsumer>
+      </TabProvider>
     );
   }
 }

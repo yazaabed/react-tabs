@@ -1,8 +1,10 @@
 import React from "react";
 
 const TabsContext = React.createContext({
-  prevActiveTab: {},
-  activeTab: {}
+  context: {
+    prevActiveTab: {},
+    activeTab: {}
+  }
 });
 
 class TabProvider extends React.Component {
@@ -12,22 +14,13 @@ class TabProvider extends React.Component {
     activeTab: this.props.activeTab
   };
 
-  addTab = newTab => {
-    let isNewTabFound;
+  addTab = tab => {
+    const isTabExist = this.state.tabs.find((t) => tab.id === t.id);
 
-    for (let i in this.state.tabs) {
-      let tab = this.state.tabs[i];
-
-      if (tab.id === newTab.id) {
-        isNewTabFound = true;
-        break;
-      }
-    }
-
-    if (!isNewTabFound) {
+    if (!isTabExist) {
       this.setState((prevState, props) => {
         return {
-          tabs: prevState.tabs.concat(newTab)
+          tabs: prevState.tabs.concat(tab)
         };
       });
     }
@@ -70,4 +63,4 @@ class TabProvider extends React.Component {
 
 const TabConsumer = TabsContext.Consumer;
 
-export { TabProvider, TabConsumer };
+export { TabProvider, TabsContext, TabConsumer };
