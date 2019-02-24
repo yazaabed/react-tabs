@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import { TabsContext } from "./TabsContext";
 
-class Tab extends Component {
+class Tab extends React.Component {
   componentDidMount() {
     this.context.context.addTab({
       id: this.props.id,
