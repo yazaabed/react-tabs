@@ -20,7 +20,7 @@ const Example1 = () => (
       </Tabs.Tab>
       <Tabs.Tab id="tab2" title="Tab 2">
         <div style={{ padding: 10 }}>
-          This is tab 1
+          This is tab 2
         </div>
       </Tabs.Tab>
     </Tabs>
