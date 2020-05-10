@@ -2,12 +2,12 @@
 Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component to handle everythings.
 
 ## Introduction
-This project done using ReactJS and glamorous styling to add a simple tabs component to your project.
+This project done using ReactJS and normal styling to add a small react-tabs component to your project without a huge library.
 
 ### Examples
 ```javascript
 import React from "react";
-import { Tabs } from "@yazanaabed/react-tabs";
+import { Tabs } from "@feuer/react-tabs";
 
 const styles = {
   fontFamily: "sans-serif",
@@ -47,13 +47,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 ## Authors
 
 * **Yazan Aabed**
-* See also the list of [contributors](https://github.com/YazanAabeed/react-tabs/graphs/contributors) who participated in this project.
+* See also the list of [contributors](https://github.com/yazaabed/react-tabs/graphs/contributors) who participated in this project.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
-
-* This component to learn more about react
 * I will add a unit tests for it ASAP
