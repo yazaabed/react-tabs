@@ -1,4 +1,4 @@
-yarn install --force
+yarn install --registry https://registry.yarnpkg.com
 yarn run build
 git checkout -- .
 cd ./src/
