@@ -20,7 +20,7 @@
     "clean:all": "rimraf dist/",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o .docs",
-    "semantic-release": "npm publish dist"
+    "semantic-release": "npm publish dist --access public"
   },
   "eslintConfig": {
     "extends": "react-app"
