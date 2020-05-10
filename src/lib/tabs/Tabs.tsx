@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { TabProvider, TabConsumer } from "./TabsContext";
 import TabItem from "./Tab";
 
@@ -19,12 +19,12 @@ const TabTitleItem = ({ children, innerRef, ...restProps }) => (
   }} { ...restProps }>{ children }</li>
 );
 
-const ActiveTabBorder = ({ activeTabElement, children, ...restProps }) => {
-  const style = {
-    height: 4,
+const ActiveTabBorder = ({ activeTabElement, ...restProps }) => {
+  const style: CSSProperties = {
+    height: "4px",
     backgroundColor: "#0088dd",
     position: "absolute",
-    bottom: 0,
+    bottom: "0",
     transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
     willChange: "left, width"
   };
@@ -35,14 +35,12 @@ const ActiveTabBorder = ({ activeTabElement, children, ...restProps }) => {
   }
 
   return (
-    <div style={style} { ...restProps }>
-      { children }
-    </div>
+    <div style={style} { ...restProps } />
   )
 };
 
 const TabAnchorItem = ({ isActiveTab, children, ...restProps}) => {
-  const style = {
+  const style: CSSProperties & any = {
     textTransform: "capitalize",
     color: "#000000",
     fontWeight: 600,
@@ -51,6 +49,9 @@ const TabAnchorItem = ({ isActiveTab, children, ...restProps}) => {
     opacity: "0.4",
     display: "block",
     textDecoration: "none",
+    backgroundColor: "transparent",
+    outline: "none",
+    border: 0,
     ":hover": {
       opacity: 1
     }
@@ -63,7 +64,7 @@ const TabAnchorItem = ({ isActiveTab, children, ...restProps}) => {
   }
 
   return (
-    <a style={style} {...restProps}>{ children }</a>
+    <button style={style} {...restProps}>{ children }</button>
   );
 };
 
@@ -79,10 +80,7 @@ const TabsContainer = ({ children, ...restProps }) => (
 );
 
 const ReactTabs = ({ children, ...restProps }) => (
-  <div style={{
-    position: "realative"
-  }}
-  { ...restProps }>
+  <div style={{ position: "relative" }} { ...restProps }>
     { children }
   </div>
 );
@@ -90,9 +88,26 @@ const ReactTabs = ({ children, ...restProps }) => (
 class Tabs extends React.Component {
   static Tab = TabItem;
 
+  props: {
+    activeTab: any;
+    children: React.ReactDOM
+  };
+
   state = {
     tabsElements: []
   };
+
+  updateDimensions() {
+    this.setState({ ...this.state });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.updateDimensions.bind(this));
+  }
 
   render() {
     return (
@@ -108,7 +123,7 @@ class Tabs extends React.Component {
                       id={tab.id}
                       innerRef={tabElement => {
                         if (!this.state.tabsElements[tab.id]) {
-                          this.setState((prevState, props) => {
+                          this.setState((prevState: { tabsElements: any[] }, props) => {
                             const tabsElements = prevState.tabsElements;
                             tabsElements[tab.id] = tabElement;
 
@@ -121,13 +136,12 @@ class Tabs extends React.Component {
                     >
                       <TabAnchorItem
                         isActiveTab={value.context.activeTab.id === tab.id}
-                        href="javascript:void(0)"
                         onClick={value.context.onClick(tab)}
                         onKeyPress={event => {
                           const code = event.keyCode || event.which;
 
                           if (code === 13) {
-                            this.onClick(tab)(event);
+                            value.context.onClick(tab)(event);
                           }
                         }}
                       >

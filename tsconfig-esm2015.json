@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
+    "module": "es2015",
+    "target": "es2015",
+    "baseUrl": "./src",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "lib": ["dom", "es2015"],
+    "jsx": "react",
+    "allowJs": true,
+    "sourceMap": true,
+    "importHelpers": true,
+    "outDir": "./dist/esm2015"
+  },
+  "files": ["./src/index.ts"],
+  "include": [
+    "./src/index.d.ts"
+  ]
+}

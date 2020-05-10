@@ -1,12 +1,18 @@
-import React from "react";
-import { Tabs } from "@yazanaabed/react-tabs";
+import React from 'react';
+import { Tabs } from '@feuer/react-tabs';
+import { Welcome } from '@storybook/react/demo';
+
+export default {
+  title: 'Tabs',
+  component: Welcome,
+};
 
 const styles = {
   fontFamily: "sans-serif",
   textAlign: "center"
 };
 
-const Example1 = () => (
+export const ToStorybook = () => (
   <div style={styles}>
     <Tabs
       activeTab={{
@@ -27,4 +33,6 @@ const Example1 = () => (
   </div>
 );
 
-export { Example1 };
+ToStorybook.story = {
+  name: 'Normal Usage',
+};
