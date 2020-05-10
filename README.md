@@ -1,5 +1,5 @@
 # React Tabs
-Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component to handle everythings.
+Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component.
 
 ## Introduction
 This project done using ReactJS and normal styling to add a small react-tabs component to your project without a huge library.
