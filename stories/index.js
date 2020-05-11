@@ -1,2 +1,2 @@
-import './Welcome';
-import './Tabs';
+import './Welcome.stories';
+import './Tabs.stories';

@@ -12,7 +12,7 @@ const basicTheme = create({
 addParameters({
   options: {
     showPanel: true,
-    panelPosition: 'right',
+    panelPosition: 'bottom',
     theme: basicTheme
   },
   readme: {
