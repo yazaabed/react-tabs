@@ -991,9 +991,9 @@
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
 "@feuer/react-tabs@*":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@feuer/react-tabs/-/react-tabs-0.1.6.tgz#b754b233c806ccd1cef0c73bf1cc6743e9242db2"
-  integrity sha512-77ix5FLE7USh7hc2fEN9C2tDOY5u+5Zaoy8RtABRu/sWI1zNXtCa+ld2h1qd5A3Lj77cy1U4fQl0v4w+JxANpQ==
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@feuer/react-tabs/-/react-tabs-0.1.7.tgz#ad7198a4e082f09266828b33328a44f3ac542eae"
+  integrity sha512-6v4tIUE4fgEVNTalhhtAcXlrPmwrDqhbz332ZUDksFvVz11otYQhPWo4FZhFDFRKu+sV0UhrNA+IfgGHmeXLIA==
   dependencies:
     tslib "^1.11.2"
 
