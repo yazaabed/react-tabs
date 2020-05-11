@@ -1,6 +1,6 @@
 {
   "name": "@feuer/react-tabs",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "bundles/tabs.umd.js",
   "module": "fesm5/tabs.js",
   "es2015": "fesm2015/tabs.js",
