@@ -8,13 +8,14 @@ export default {
         globals: {
             'react': 'React',
             'react-dom': 'ReactDOM',
-            'tslib': 'tslib'
+            'tslib': 'tslib',
+            'prop-types': 'PropTypes'
         }
     },
     external: [
         'react',
         'tslib',
         'react-dom',
-        'react-proptypes'
+        'prop-types'
     ]
 };

@@ -1,4 +1,5 @@
 yarn install --registry https://registry.yarnpkg.com
+yarn upgrade @feuer/react-tab
 yarn run build
 git checkout -- .
 cd ./src/

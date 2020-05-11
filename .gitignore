@@ -21,7 +21,6 @@ yarn-error.log*
 
 # Build folder
 /dist
-.storybook
 .docs
 .yarnrc
 .npmrc
