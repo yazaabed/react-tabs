@@ -16,16 +16,10 @@
   },
   "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "prop-types": "^15.7.2"
   },
   "description": "This component use compound components concept to create a simple tabs component",
-  "directories": {
-    "lib": "lib",
-    "src": "src"
-  },
-  "publishConfig": {
-    "registry": "http://registry.npmjs.org/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yazaabed/react-tabs.git"
@@ -36,12 +30,14 @@
     "tabs",
     "react-tabs",
     "state-management",
-    "components"
+    "components",
+    "rollup-example",
+    "storybook"
   ],
   "author": "yazanaabed <yazanaabed2@gmail.com> (https://medium.com/@yazanaabed)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/yazaabed/react-tabs/issues"
   },
-  "homepage": "https://github.com/yazaabed/react-tabs#readme"
+  "homepage": "https://feuer-ui.netlify.app/"
 }
