@@ -1,6 +1,6 @@
 {
   "name": "@feuer/react-tabs",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "main": "bundles/tabs.umd.js",
   "module": "fesm5/tabs.js",
   "es2015": "fesm2015/tabs.js",
@@ -15,9 +15,9 @@
     "tslib": "^1.11.2"
   },
   "peerDependencies": {
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "prop-types": "^15.7.2"
+    "react-dom": "^16.13.1"
   },
   "description": "This component use compound components concept to create a simple tabs component",
   "repository": {
