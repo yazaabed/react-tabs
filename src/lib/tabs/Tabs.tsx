@@ -1,13 +1,15 @@
 import React, { CSSProperties } from "react";
+import PropTypes from 'prop-types';
 import { TabProvider, TabConsumer } from "./TabsContext";
-import TabItem from "./Tab";
+import TabItem, {TabInputs} from "./Tab";
 
-const ListTabs = ({ children }) => (
+const ListTabs = ({ children, className = null, style = {}}) => (
   <ul style={{
     paddingLeft: 0,
     listStyle: "none",
-    margin: 0
-  }}>{ children }</ul>
+    margin: 0,
+    ...style
+  }} className={className}>{ children }</ul>
 );
 
 const TabTitleItem = ({ children, innerRef, ...restProps }) => (
@@ -39,7 +41,7 @@ const ActiveTabBorder = ({ activeTabElement, ...restProps }) => {
   )
 };
 
-const TabAnchorItem = ({ isActiveTab, children, ...restProps}) => {
+const TabAnchorItem = ({ isActiveTab, children, tabIndex, ...restProps}) => {
   const style: CSSProperties & any = {
     textTransform: "capitalize",
     color: "#000000",
@@ -64,7 +66,7 @@ const TabAnchorItem = ({ isActiveTab, children, ...restProps}) => {
   }
 
   return (
-    <button style={style} {...restProps}>{ children }</button>
+    <button style={style} tabIndex={tabIndex} {...restProps}>{ children }</button>
   );
 };
 
@@ -88,9 +90,24 @@ const ReactTabs = ({ children, ...restProps }) => (
 class Tabs extends React.Component {
   static Tab = TabItem;
 
+  static propTypes: {
+    activeTab: {
+      id: React.Validator<string>;
+    };
+    children: React.Validator<React.ReactNode[]>;
+    tabsProps: {
+      style?: React.Validator<Object>;
+      className?: React.Validator<string>;
+    }
+  };
+
   props: {
-    activeTab: any;
-    children: React.ReactDOM
+    activeTab: TabInputs;
+    children: React.ReactDOM;
+    tabsProps?: {
+      style?: CSSProperties;
+      className?: string;
+    }
   };
 
   state = {
@@ -110,13 +127,15 @@ class Tabs extends React.Component {
   }
 
   render() {
+    const tabsProps = this.props.tabsProps || {};
+
     return (
       <TabProvider activeTab={this.props.activeTab}>
         <TabConsumer>
           {value => (
             <ReactTabs>
               <TabsContainer>
-                <ListTabs>
+                <ListTabs className={tabsProps.className} style={tabsProps.style}>
                   {value.context.tabs.map((tab, index) => (
                     <TabTitleItem
                       key={index}
@@ -137,6 +156,7 @@ class Tabs extends React.Component {
                       <TabAnchorItem
                         isActiveTab={value.context.activeTab.id === tab.id}
                         onClick={value.context.onClick(tab)}
+                        tabIndex={tab.tabIndex || index}
                         onKeyPress={event => {
                           const code = event.keyCode || event.which;
 
@@ -166,5 +186,16 @@ class Tabs extends React.Component {
     );
   }
 }
+
+Tabs.propTypes = {
+  activeTab: {
+    id: PropTypes.string.isRequired,
+  },
+  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  tabsProps: {
+    style: PropTypes.object,
+    className: PropTypes.string
+  }
+};
 
 export default Tabs;

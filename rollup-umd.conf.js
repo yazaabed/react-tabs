@@ -9,13 +9,14 @@ export default {
         sourcemap: true,
         globals: {
             'react': 'React',
-            'react-dom': 'ReactDOM'
+            'react-dom': 'ReactDOM',
+            'prop-types': 'PropTypes'
         }
     },
     external: [
         'react',
         'react-dom',
-        'react-proptypes'
+        'prop-types'
     ],
     plugins: [
         resolve({
