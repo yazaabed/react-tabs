@@ -1,3 +1,7 @@
+# Demo
+- For quick demo please checkout this [storybook](https://feuer-ui.netlify.app/).
+- For quick code usage pelase checkout this [codesandbox](https://codesandbox.io/s/frosty-pond-etcqj?file=/src/App.js)
+
 # React Tabs
 Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component.
 

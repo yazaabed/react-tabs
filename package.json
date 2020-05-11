@@ -19,7 +19,7 @@
     "build:umd:min": "rollup -c rollup-umd-min.conf.js",
     "move:assets": "copyfiles ./README.md ./dist && copyup -F ./src/package.json ./dist",
     "clean:all": "rimraf dist/",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o .docs",
     "semantic-release": "npm publish dist --access public",
     "storybook": "start-storybook -p 6006"
   },
