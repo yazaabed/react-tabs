@@ -1,9 +1,17 @@
+# React Tabs
+Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component.
+
+[![npm](https://img.shields.io/npm/v/@feuer/react-tabs.svg?style=flat-square)](https://www.npmjs.com/package/@feuer/react-tabs)
+[![npm License](https://img.shields.io/npm/l/@feuer/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
+
+[![GitHub contributors](https://img.shields.io/github/contributors/yazaabed/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
+[![GitHub stars](https://img.shields.io/github/stars/ng-packagr/ng-packagr.svg?label=GitHub%20Stars&style=flat-square)](https://github.com/celonis/widget-devkit)
+[![npm Downloads](https://img.shields.io/npm/dw/@feuer/react-tabs.svg?style=flat-square)](https://www.npmjs.com/package/@feuer/react-tabs)
+
 # Demo
 - For quick demo please checkout this [storybook](https://feuer-ui.netlify.app/).
 - For quick code usage pelase checkout this [codesandbox](https://codesandbox.io/s/frosty-pond-etcqj?file=/src/App.js)
-
-# React Tabs
-Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component.
 
 ## Introduction
 This project done using ReactJS and normal styling to add a small react-tabs component to your project without a huge library.
