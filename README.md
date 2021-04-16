@@ -1,8 +1,8 @@
 # React Tabs
 Simple React Tabs using the new react ContextAPI to manage changes active tabs or not. And there is no need to add tabs container you just add a tab component.
 
-[![npm](https://img.shields.io/npm/v/react-tabs.svg?style=flat-square)](https://www.npmjs.com/package/@feuer/react-tabs)
-[![npm License](https://img.shields.io/npm/l/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
+[![npm](https://img.shields.io/npm/v/@feuer/react-tabs.svg?style=flat-square)](https://www.npmjs.com/package/@feuer/react-tabs)
+[![npm License](https://img.shields.io/npm/l/@feuer/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
 [![GitHub contributors](https://img.shields.io/github/contributors/yazaabed/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
