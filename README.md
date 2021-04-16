@@ -6,7 +6,7 @@ Simple React Tabs using the new react ContextAPI to manage changes active tabs o
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
 [![GitHub contributors](https://img.shields.io/github/contributors/yazaabed/react-tabs.svg?style=flat-square)](https://github.com/yazaabed/react-tabs)
-[![GitHub stars](https://img.shields.io/github/stars/yazaabed/react-tabs.svg?label=GitHub%20Stars&style=flat-square)](https://github.com/celonis/widget-devkit)
+[![GitHub stars](https://img.shields.io/github/stars/yazaabed/react-tabs.svg?label=GitHub%20Stars&style=flat-square)](https://github.com/yazaabed/react-tabs)
 [![npm Downloads](https://img.shields.io/npm/dw/@feuer/react-tabs.svg?style=flat-square)](https://www.npmjs.com/package/@feuer/react-tabs)
 
 # Demo
