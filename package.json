@@ -65,7 +65,7 @@
     "rollup-plugin-svg": "^2.0.0",
     "rollup-plugin-terser": "^5.3.0",
     "rollup-plugin-typescript2": "^0.27.0",
-    "semantic-release": "^17.0.7",
+    "semantic-release": "^19.0.3",
     "storybook-readme": "^5.0.8",
     "terser": "^4.6.13",
     "tslib": "^1.11.2"
